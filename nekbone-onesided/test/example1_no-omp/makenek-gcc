@@ -1,0 +1,96 @@
+#!/bin/bash
+# Nek5000 build config file
+# (c) 2008,2009,2010 UCHICAGO ARGONNE, LLC
+
+# source path 
+SOURCE_ROOT="../../src"
+
+# Fortran compiler
+F77="mpif77"
+
+# C compiler
+CC="mpicc"
+
+#NEKbone version (RMA/RMA_PSCW/RMA_PSCW-2/RMA_PT/RMA_PT-1/RMA_PT-2/RMA_PT-3
+#VER=0
+echo arguments 0=$0, 1=$1, 2=$2
+if [ $# -eq 2 ]; then
+        VER=$(echo $2 | awk -F'src_' '{print $2}')
+        echo VER=$VER
+        if [ -z $VER ]; then
+        echo Check source directory name, it should start with 'src_'
+        exit 0
+        fi
+else
+        echo Using default source directory
+fi
+
+# pre-processor symbol list
+# (set PPLIST=? to get a list of available symbols)
+#PPLSIT="BGQ BGP K10_MXM TIMERS MPITIMER BGQTIMER CGTTIMER NITER=20 LOG MPITHREADS XSMM MXMBASIC MKL BLAS_MXM XSMM_FIXED XSMM_DISPATCH NPOLY=8"
+# Select PPLIST depending upon the 1st argument to command-line "0:Baseline, 1:MPI_Put, 2:MPI_Get"
+if [ $# == 2 ] && [ $1 == 1 ]; then
+      echo Using PPLIST-6a MPI_Put
+              PPLIST="TIMERS CGTIMERS HPE_USING_PUT HPE_ONE_SIDED"
+elif [ $# == 2 ] && [ $1 == 2 ]; then
+      echo Using PPLIST-6b MPI_Get
+      PPLIST="TIMERS CGTIMERS HPE_USING_GET HPE_ONE_SIDED"
+else
+      echo Using PPLIST-2 baseline
+        PPLIST="TIMERS CGTIMERS"
+fi
+
+# OPTIONAL SETTINGS
+# -----------------
+
+# enable MPI (default true)
+#IFMPI="false"
+
+# auxilliary files to compile
+# NOTE: source files have to located in the same directory as makenek
+#       a makefile_usr.inc has to be provided containing the build rules 
+#USR="foo.o"
+
+# linking flags
+#USR_LFLAGS=" -L${T}/bld/lib -lzhpe_stats -lzhpeq_util -lfabric -mcmodel=large -shared-libgcc "
+USR_LFLAGS=" -mcmodel=large -shared-libgcc "
+
+# generic compiler flags
+#G="-g"
+#G=" -I${T}/bld/include "
+
+# optimization flags
+OPT_FLAGS_STD="-O3 -mcmodel=large -shared-libgcc "
+OPT_FLAGS_MAG="-O3 -mcmodel=large -shared-libgcc "
+
+###############################################################################
+# DONT'T TOUCH WHAT FOLLOWS !!!
+###############################################################################
+# assign version tag
+mver=1
+# overwrite source path with optional 2nd argument
+if [ -d $2 ] && [ $# -eq 2 ]; then
+  SOURCE_ROOT="$2"
+  echo "change source code directory to: ", $SOURCE_ROOT
+fi
+# do some checks and create makefile
+source $SOURCE_ROOT/makenek.inc
+# compile
+make -j4 -f makefile 2>&1 | tee compiler.out
+
+#Renaming nekbone executable according to source directory and PPLIST used.
+if [ $# == 2 ] && [ $1 == 0 ]; then
+        echo copying nekbone to nekbone_${VER}_baseline
+        cp nekbone nekbone_${VER}_baseline
+elif [ $# == 2 ] && [ $1 == 1 ]; then
+        echo copying nekbone to nekbone_${VER}_Put
+        cp nekbone nekbone_${VER}_Put
+elif [ $# == 2 ] && [ $1 == 2 ]; then
+        echo copying nekbone to nekbone_${VER}_Get
+        cp nekbone nekbone_${VER}_Get
+else
+        echo copying nekbone to nekbone_baseline
+        cp nekbone nekbone_baseline
+fi
+
+exit 0

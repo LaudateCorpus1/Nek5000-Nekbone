@@ -1,0 +1,420 @@
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/cg.f -o obj/cg.o
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/driver.f -o obj/driver.o
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/math.f -o obj/math.o
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/omp.f -o obj/omp.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+/shared/visharma/NEKbone/src/math.f:18:72:
+
+   18 |  100     A(I) = A(I)**2
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:26:72:
+
+   26 |  100     A(I) = SQRT(A(I))
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:146:72:
+
+  146 |  100     A(I ) = 0.0
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:154:72:
+
+  154 |  100     A(I ) = 0
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:161:72:
+
+  161 |  100     A(I ) = 1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:168:72:
+
+  168 |  100     A(I ) = 1.0
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:176:72:
+
+  176 |  100     A(I) = B
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:184:72:
+
+  184 |  100     IA(I) = IB
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:202:72:
+
+  202 |  100     A(I) = B(I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:210:72:
+
+  210 |  100     A(I) = B(I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:218:72:
+
+  218 |  100     A(I) = B(I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:396:72:
+
+  396 |       DO 200 IY=1,NY
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 200 at (1)
+/shared/visharma/NEKbone/src/math.f:470:72:
+
+  470 |    30 B(I)=TEMP(I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 30 at (1)
+/shared/visharma/NEKbone/src/math.f:1022:72:
+
+ 1022 |    30 B(I)=TEMP(I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 30 at (1)
+/shared/visharma/NEKbone/src/math.f:1060:72:
+
+ 1060 |  100     A(I) = A(I) + C
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+/shared/visharma/NEKbone/src/math.f:1037:72:
+
+ 1037 |       call sort(xout,work,n)
+      |                                                                        1
+Warning: Type mismatch in argument ‘ind’ at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/math.f:1051:21:
+
+ 1050 |       DO 100 I=2,N
+      |                                                                        2
+ 1051 |          TSUM=TSUM+A(I)
+      |                     1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/mxm_wrapper.f -o obj/mxm_wrapper.o 
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/prox_dssum.f -o obj/prox_dssum.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/prox_setup.f -o obj/prox_setup.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/semhat.f -o obj/semhat.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/speclib.f -o obj/speclib.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+/shared/visharma/NEKbone/src/speclib.f:666:72:
+
+  666 |       DO 200 J=1,NZ
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 200 at (1)
+/shared/visharma/NEKbone/src/speclib.f:700:72:
+
+  700 |       DO 200 J=1,NZ
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 200 at (1)
+/shared/visharma/NEKbone/src/speclib.f:747:72:
+
+  747 |       DO 200 J=1,NZ
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 200 at (1)
+/shared/visharma/NEKbone/src/speclib.f:782:72:
+
+  782 |       DO 200 J=1,NZ
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 200 at (1)
+/shared/visharma/NEKbone/src/speclib.f:824:72:
+
+  824 |       DO 200 J=1,NZ
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 200 at (1)
+/shared/visharma/NEKbone/src/speclib.f:955:72:
+
+  955 |          DO 10 JQ = 1, NZM1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+/shared/visharma/NEKbone/src/speclib.f:1008:72:
+
+ 1008 |          DO 100 J=1,NPGL
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/speclib.f:1016:72:
+
+ 1016 |       DO 300 J=1,NPGL
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 300 at (1)
+/shared/visharma/NEKbone/src/speclib.f:1057:72:
+
+ 1057 |       DO 100 J=1,NPGL
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/speclib.f:1094:72:
+
+ 1094 |          DO 10 J=1,NZ1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+/shared/visharma/NEKbone/src/speclib.f:1119:72:
+
+ 1119 |          DO 10 J=1,NZ1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+/shared/visharma/NEKbone/src/speclib.f:1145:72:
+
+ 1145 |          DO 10 J=1,NZ1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+/shared/visharma/NEKbone/src/speclib.f:1171:72:
+
+ 1171 |          DO 10 J=1,NZ1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 10 at (1)
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/timers.c -o obj/timers.o
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/comm_mpi.f -o obj/comm_mpi.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc  -fcray-pointer -fdefault-real-8 -x f77-cpp-input -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/mxm_std.f -o obj/mxm_std.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+/shared/visharma/NEKbone/src/mxm_std.f:1172:72:
+
+ 1172 |          DO 100 K=1,N2
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/mxm_std.f:1174:72:
+
+ 1174 |          DO 100 I=1,N1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/mxm_std.f:1195:72:
+
+ 1195 |             DO 100 K=1,N2
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/mxm_std.f:1274:72:
+
+ 1274 |          DO 100 K=1,N2
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/mxm_std.f:1276:72:
+
+ 1276 |          DO 100 I=1,N1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/mxm_std.f:1631:72:
+
+ 1631 |          DO 100 K=1,N2
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/mxm_std.f:1633:72:
+
+ 1633 |          DO 100 I=1,N1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 100 at (1)
+/shared/visharma/NEKbone/src/mxm_std.f:1150:29:
+
+ 1145 |       do i=1,n-1
+      |                                                                        2
+......
+ 1150 |          a(i) = -.25*(a(i)+a(i+1)) + (x*x + k + l)/(x*x+m)
+      |                             1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+/shared/visharma/NEKbone/src/mxm_std.f:1151:29:
+
+ 1145 |       do i=1,n-1
+      |                                                                        2
+......
+ 1151 |          b(i) = -.25*(b(i)+b(i+1)) + (x*x + k + m)/(x*x+l)
+      |                             1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+mpif77 -c -I/include  -O3 -mcmodel=large -shared-libgcc       -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG -I/shared/visharma/NEKbone/test/example1_no-omp -I/shared/visharma/NEKbone/src -I./ /shared/visharma/NEKbone/src/blas.f -o obj/blas.o
+f951: Warning: Nonexistent include directory ‘/include’ [-Wmissing-include-dirs]
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/gs.c -o obj/jl_gs.o
+/shared/visharma/NEKbone/src/blas.f:9584:72:
+
+ 9584 |                IF(DFLAG) 50,10,30
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/shared/visharma/NEKbone/src/blas.f:9623:72:
+
+ 9623 |           IF(DFLAG)120,80,100
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/shared/visharma/NEKbone/src/blas.f:9764:15:
+
+ 9764 |       GO TO IGO,(120,150,180,210)
+      |               1
+Warning: Deleted feature: Assigned GOTO statement at (1)
+/shared/visharma/NEKbone/src/blas.f:9770:72:
+
+ 9770 |                ASSIGN 120 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:9782:72:
+
+ 9782 |                ASSIGN 150 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:9795:72:
+
+ 9795 |                ASSIGN 180 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:9806:72:
+
+ 9806 |                ASSIGN 210 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:9815:72:
+
+ 9815 |           IF(DFLAG)250,230,240
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17100:72:
+
+17100 |                IF(SFLAG) 50,10,30
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17139:72:
+
+17139 |           IF(SFLAG)120,80,100
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17277:15:
+
+17277 |       GO TO IGO,(120,150,180,210)
+      |               1
+Warning: Deleted feature: Assigned GOTO statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17283:72:
+
+17283 |                ASSIGN 120 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17295:72:
+
+17295 |                ASSIGN 150 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17308:72:
+
+17308 |                ASSIGN 180 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17319:72:
+
+17319 |                ASSIGN 210 TO IGO
+      |                                                                        1
+Warning: Deleted feature: ASSIGN statement at (1)
+/shared/visharma/NEKbone/src/blas.f:17328:72:
+
+17328 |           IF(SFLAG)250,230,240
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/sort.c -o obj/jl_sort.o
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/sarray_transfer.c -o obj/jl_sarray_transfer.o
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/sarray_sort.c -o obj/jl_sarray_sort.o
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/gs_local.c -o obj/jl_gs_local.o
+/shared/visharma/NEKbone/src/comm_mpi.f:304:72:
+
+  304 |       call bcast(item,isize)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed INTEGER(4) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:1019:72:
+
+ 1019 |             call crecv(type,w,bytes)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:1041:72:
+
+ 1041 |       if (nid .ne. 0) call csend(type,x,bytes,parent,nullpid)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:1052:72:
+
+ 1052 |            call csend(typer,x,bytes,jnid,nullpid)
+      |                                                                        1
+Warning: Type mismatch in argument ‘mtype’ at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:1054:72:
+
+ 1054 |            call crecv(typer,x,bytes)
+      |                                                                        1
+Warning: Type mismatch in argument ‘mtype’ at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:797:15:
+
+  797 |       call gop(tmsg,t1,'+  ',1)
+      |               1
+Warning: Rank mismatch in argument ‘x’ at (1) (rank-1 and scalar) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:802:16:
+
+  802 |          msg  = irecv(1,y,1)
+      |                1
+Warning: Type mismatch in argument ‘x’ at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:803:72:
+
+  803 |          call csend(1,x,1,nodeb,0)   ! Initiate send, to synch.
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:808:19:
+
+  808 |             msg  = irecv(i,y,len)
+      |                   1
+Warning: Type mismatch in argument ‘x’ at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:809:72:
+
+  809 |             call csend(i,x,len,nodeb,0)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:818:72:
+
+  818 |          call crecv(1,y,1)           ! Initiate send, to synch.
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:819:72:
+
+  819 |          call csend(1,x,1,nodea,0)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:823:72:
+
+  823 |             call crecv(i,y,len)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:824:72:
+
+  824 |             call csend(i,x,len,nodea,0)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:832:15:
+
+  832 |       call gop(tmsg,t1,'+  ',1)
+      |               1
+Warning: Rank mismatch in argument ‘x’ at (1) (rank-1 and scalar) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:726:19:
+
+  726 |             msg  = irecv(itest,y,1)
+      |                   1
+Warning: Type mismatch in argument ‘x’ at (1); passed REAL(8) to INTEGER(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:727:72:
+
+  727 |             call csend(itest,x,1,nodeb,0)   ! Initiate send, to synch.
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:754:72:
+
+  754 |             call crecv(itest,y,1)           ! Initiate send, to synch.
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+/shared/visharma/NEKbone/src/comm_mpi.f:755:72:
+
+  755 |             call csend(itest,x,1,nodea,0)
+      |                                                                        1
+Warning: Type mismatch in argument ‘buf’ at (1); passed REAL(8) to REAL(4) [-Wargument-mismatch]
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/crystal.c -o obj/jl_crystal.o
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/comm.c -o obj/jl_comm.o
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/tensor.c -o obj/jl_tensor.o
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/fail.c -o obj/jl_fail.o
+mpicc -c -I/include  -O3 -mcmodel=large -shared-libgcc  -DTIMERS -DCGTIMERS -DPTRSIZE8 -DMPI -DLONGINT8 -DUNDERSCORE -DGLOBAL_LONG_LONG  -DPREFIX=jl_ /shared/visharma/NEKbone/src/jl/fcrystal.c -o obj/jl_fcrystal.o
+mpif77 -o nekbone -I/include  obj/cg.o obj/driver.o obj/math.o obj/omp.o obj/mxm_wrapper.o obj/prox_dssum.o obj/prox_setup.o obj/semhat.o obj/speclib.o obj/timers.o obj/comm_mpi.o obj/mxm_std.o obj/blas.o obj/jl_gs.o obj/jl_sort.o obj/jl_sarray_transfer.o obj/jl_sarray_sort.o obj/jl_gs_local.o obj/jl_crystal.o obj/jl_comm.o obj/jl_tensor.o obj/jl_fail.o obj/jl_fcrystal.o -L/shared/visharma/jlb-staging/bld/lib -lzhpe_stats -lzhpeq_util -lfabric -mcmodel=large -shared-libgcc 
+#############################################################
+#                  Compilation successful!                  #
+#############################################################
+   text	   data	    bss	    dec	    hex	filename
+ 876578	   1364	8760909728	8761787670	20a3e4516	nekbone
+
